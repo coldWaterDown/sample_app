@@ -20,3 +20,11 @@ module SampleApp
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+require File.expand_path('../boot', __FILE__)
+
+module Twitter
+  class Application < Rails::Application
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+  end
+end
